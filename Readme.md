@@ -1,0 +1,10 @@
+# How to integrate the Web Report Designer into a web application
+
+
+<p>This example demonstrates how you can integrate the <strong>Web Report Designer</strong> into your web application. The application contains a simple report catalog, allowing you to add, delete, and edit reports whose layout data is stored in a custom data storage (i.e., an MDB database).</p>
+<p> Additionally, this example demonstrates how you can add custom commands to the report designer menu at runtime to provide better integration with your application. In the example, the custom <strong>Close</strong> menu command is introduced, which redirects you to the catalog page.</p>
+<p> <br /><strong>See also:<br /></strong><a href="https://www.devexpress.com/Support/Center/p/T190370">T190370: How to integrate the Web Report Designer into an MVC web application</a><br /><a href="https://www.devexpress.com/Support/Center/p/T227679">T227679: ASPxReportDesigner - How to create an ASP.NET End-User reporting application with the filesystem report storage managed by the ASPxFileManager control</a></p>
+
+<br/>
+
+
