@@ -1,3 +1,14 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Default.aspx](./CS/SimpleWebReportCatalog/Default.aspx) (VB: [Default.aspx](./VB/SimpleWebReportCatalog/Default.aspx))
+* [Default.aspx.cs](./CS/SimpleWebReportCatalog/Default.aspx.cs) (VB: [Default.aspx](./VB/SimpleWebReportCatalog/Default.aspx))
+* [Designer.aspx](./CS/SimpleWebReportCatalog/Designer.aspx) (VB: [Designer.aspx.vb](./VB/SimpleWebReportCatalog/Designer.aspx.vb))
+* [Designer.aspx.cs](./CS/SimpleWebReportCatalog/Designer.aspx.cs) (VB: [Designer.aspx.vb](./VB/SimpleWebReportCatalog/Designer.aspx.vb))
+* [DesignerTask.cs](./CS/SimpleWebReportCatalog/DesignerTask.cs) (VB: [DesignerTask.vb](./VB/SimpleWebReportCatalog/DesignerTask.vb))
+* [ReportModel.cs](./CS/SimpleWebReportCatalog/ReportModel.cs) (VB: [ReportModel.vb](./VB/SimpleWebReportCatalog/ReportModel.vb))
+* [ReportStorage.cs](./CS/SimpleWebReportCatalog/ReportStorage.cs) (VB: [ReportStorage.vb](./VB/SimpleWebReportCatalog/ReportStorage.vb))
+<!-- default file list end -->
 # How to integrate the Web Report Designer into a web application
 
 
