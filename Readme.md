@@ -12,13 +12,12 @@
 
 # How to Integrate Web Report Designer in a Web Application
 
+The application allows you to add, delete, and edit reports stored a Microsoft SQL Server database. A project implements the [ReportStorageWebExtension](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension) descendant to access the database.
 
-The application stores reports in a database hosted in Microsoft SQL Server. It allows you to add, delete, and edit reports.
+This example also demonstrates how to add custom commands to the report designer menu at runtime. A custom _Close_ menu command redirects you to the homepage.
 
-This example also demonstrates how to add custom commands to the report designer menu at runtime. A custom <strong>Close</strong> menu command redirects you to the homepage.
-
->- Create the **Reports** database in the local Microsoft SQL Server. Add the **ReportLayout** table with the following script:
 > Before you start:
+>- Create the **Reports** database in the local Microsoft SQL Server. Add the **ReportLayout** table with the following script:
 >
 >   ```SQL
 >   USE [Reports]
