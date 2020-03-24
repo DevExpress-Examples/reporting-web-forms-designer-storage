@@ -9,7 +9,11 @@ namespace SimpleWebReportCatalog {
     public class Global : System.Web.HttpApplication {
 
         protected void Application_Start(object sender, EventArgs e) {
-            DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension.RegisterExtensionGlobal(new CustomReportStorageWebExtension()); 
+            DevExpress.XtraReports.Web.ReportDesigner.DefaultReportDesignerContainer.EnableCustomSql();
+
+            DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension.RegisterExtensionGlobal(new CustomReportStorageWebExtension());
+            DevExpress.XtraReports.Web.ASPxReportDesigner.StaticInitialize();
+
         }
 
         protected void Session_Start(object sender, EventArgs e) {

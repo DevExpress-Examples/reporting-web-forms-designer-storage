@@ -26,6 +26,8 @@
             <asp:Button CssClass="catalogButton" ID="newReportButton" runat="server"
                 Text="New Report" OnClick="NewReportButton_Click" />
         </div>
+
+
     </form>
 </body>
 </html>

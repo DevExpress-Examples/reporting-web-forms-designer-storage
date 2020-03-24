@@ -9,13 +9,39 @@
 * [DesignerTask.cs](./CS/SimpleWebReportCatalog/DesignerTask.cs) (VB: [DesignerTask.vb](./VB/SimpleWebReportCatalog/DesignerTask.vb))
 * [Global.asax.cs](./CS/SimpleWebReportCatalog/Global.asax.cs) (VB: [Global.asax.vb](./VB/SimpleWebReportCatalog/Global.asax.vb))
 <!-- default file list end -->
-# How to integrate the Web Report Designer into a web application
+
+# How to Integrate Web Report Designer in a Web Application
 
 
-<p>This example demonstrates how you can integrate the <strong>Web Report Designer</strong> into your web application. The application contains a simple report catalog, allowing you to add, delete, and edit reports whose layout data is stored in a custom data storage (i.e., an MDB database).</p>
-<p> Additionally, this example demonstrates how you can add custom commands to the report designer menu at runtime to provide better integration with your application. In the example, the custom <strong>Close</strong> menu command is introduced, which redirects you to the catalog page.</p>
-<p> <br /><strong>See also:<br /></strong><a href="https://www.devexpress.com/Support/Center/p/T190370">T190370: How to integrate the Web Report Designer into an MVC web application</a><br /><a href="https://www.devexpress.com/Support/Center/p/T227679">T227679: ASPxReportDesigner - How to create an ASP.NET End-User reporting application with the filesystem report storage managed by the ASPxFileManager control</a></p>
+The application stores reports in a database hosted in Microsoft SQL Server. It allows you to add, delete, and edit reports.
 
-<br/>
+This example also demonstrates how to add custom commands to the report designer menu at runtime. A custom <strong>Close</strong> menu command redirects you to the homepage.
+
+>- Create the **Reports** database in the local Microsoft SQL Server. Add the **ReportLayout** table with the following script:
+> Before you start:
+>
+>   ```SQL
+>   USE [Reports]
+>   GO
+>   SET ANSI_NULLS ON
+>   GO
+>   SET QUOTED_IDENTIFIER ON
+>   GO
+>   CREATE TABLE [dbo].[ReportLayout](
+>	    [ReportId] [int] IDENTITY(1,1) NOT NULL,
+>	    [DisplayName] [nvarchar](50) NULL,
+>	    [LayoutData] [varbinary](max) NULL,
+>	    [ReportId] ASC
+>   CONSTRAINT [PK_ReportLayout6] PRIMARY KEY CLUSTERED 
+>   (
+>   )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY =  OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+>   ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+>   GO
+>   ```
+>- Add the [Northwind database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs) to your local MS SQL server. 
+
+**See also:**
+* [How to Integrate Web Report Designer in an MVC Web Application<](https://www.devexpress.com/Support/Center/p/T190370)
+* [ASPxReportDesigner - How to Create an ASP.NET End-User Reporting Application with the File Report Storage Managed by the ASPxFileManager Control](https://www.devexpress.com/Support/Center/p/T227679)
 
 

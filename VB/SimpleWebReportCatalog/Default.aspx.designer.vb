@@ -10,51 +10,51 @@
 Namespace SimpleWebReportCatalog
 
 
-    Partial Public Class [Default]
+	Partial Public Class [Default]
 
-        ''' <summary>
-        ''' CatalogForm control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected CatalogForm As Global.System.Web.UI.HtmlControls.HtmlForm
+		''' <summary>
+		''' CatalogForm control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected CatalogForm As Global.System.Web.UI.HtmlControls.HtmlForm
 
-        ''' <summary>
-        ''' reportsList control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected reportsList As Global.System.Web.UI.WebControls.ListBox
+		''' <summary>
+		''' reportsList control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected reportsList As Global.System.Web.UI.WebControls.ListBox
 
-        ''' <summary>
-        ''' editButton control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected editButton As Global.System.Web.UI.WebControls.Button
+		''' <summary>
+		''' editButton control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected editButton As Global.System.Web.UI.WebControls.Button
 
-        ''' <summary>
-        ''' deleteButton control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected deleteButton As Global.System.Web.UI.WebControls.Button
+		''' <summary>
+		''' deleteButton control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected deleteButton As Global.System.Web.UI.WebControls.Button
 
-        ''' <summary>
-        ''' newReportButton control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected newReportButton As Global.System.Web.UI.WebControls.Button
-    End Class
+		''' <summary>
+		''' newReportButton control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected newReportButton As Global.System.Web.UI.WebControls.Button
+	End Class
 End Namespace

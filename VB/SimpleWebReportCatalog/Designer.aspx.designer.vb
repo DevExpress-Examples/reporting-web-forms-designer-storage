@@ -10,24 +10,24 @@
 Namespace SimpleWebReportCatalog
 
 
-    Partial Public Class Designer
+	Partial Public Class Designer
 
-        ''' <summary>
-        ''' form1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+		''' <summary>
+		''' form1 control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
-        ''' <summary>
-        ''' ASPxReportDesigner1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected ASPxReportDesigner1 As Global.DevExpress.XtraReports.Web.ASPxReportDesigner
-    End Class
+		''' <summary>
+		''' ASPxReportDesigner1 control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected ASPxReportDesigner1 As Global.DevExpress.XtraReports.Web.ASPxReportDesigner
+	End Class
 End Namespace

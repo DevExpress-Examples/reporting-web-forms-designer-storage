@@ -1,29 +1,34 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Web.UI.WebControls;
-using SimpleWebReportCatalog.CatalogDataTableAdapters;
 // ...
 
 
 namespace SimpleWebReportCatalog {
     public partial class Default : System.Web.UI.Page {
-        private CatalogData catalogDataSet;
-        private DataTable reportsTable;
-        private ReportsTableAdapter reportsTableAdapter;
-
+        private DataTable reportsTable = new DataTable();
+        string connectionString = "Data Source=localhost;Initial Catalog=Reports;Integrated Security=True";
+        private SqlDataAdapter reportsTableAdapter;
 
         protected void Page_Load(object sender, EventArgs e) {
-            catalogDataSet = new CatalogData();
-            reportsTableAdapter = new ReportsTableAdapter();
-            reportsTableAdapter.Fill(catalogDataSet.Reports);
-            reportsTable = catalogDataSet.Tables["Reports"];
-            
-            if(!IsPostBack) {
-                reportsList.DataSource = catalogDataSet;
+
+            reportsTableAdapter = new SqlDataAdapter("Select * from ReportLayout", new SqlConnection(connectionString));
+            SqlCommandBuilder builder = new SqlCommandBuilder(reportsTableAdapter);
+            reportsTableAdapter.InsertCommand = builder.GetInsertCommand();
+            reportsTableAdapter.UpdateCommand = builder.GetUpdateCommand();
+            reportsTableAdapter.DeleteCommand = builder.GetDeleteCommand();
+            reportsTableAdapter.Fill(reportsTable);
+            DataColumn[] keyColumns = new DataColumn[1];
+            keyColumns[0] = reportsTable.Columns[0];
+            reportsTable.PrimaryKey = keyColumns;
+
+            if (!IsPostBack) {
+                reportsList.DataSource = reportsTable;
                 reportsList.DataMember = "Reports";
                 reportsList.DataTextField = "DisplayName";
-                reportsList.DataValueField = "ReportID";
-                this.DataBind();   
+                reportsList.DataValueField = "ReportId";
+                this.DataBind();
             }
         }
 
@@ -50,16 +55,18 @@ namespace SimpleWebReportCatalog {
 
 
         protected void DeleteButton_Click(object sender, EventArgs e) {
-            ListItem selected = reportsList.SelectedItem;          
+            ListItem selected = reportsList.SelectedItem;
 
-            if(selected != null) {
+            if (selected != null)
+            {
                 DataRow row = reportsTable.Rows.Find(int.Parse(selected.Value));
-                if(row != null) {
+                if (row != null)
+                {
                     row.Delete();
-                    reportsTableAdapter.Update(catalogDataSet);
-                    catalogDataSet.AcceptChanges();                    
+                    reportsTableAdapter.Update(reportsTable);
+                    reportsTable.AcceptChanges();
                 }
-                reportsList.Items.Remove(reportsList.SelectedItem);  
+                reportsList.Items.Remove(reportsList.SelectedItem);
             }
         }
     }

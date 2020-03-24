@@ -1,11 +1,5 @@
-﻿#region #DesignerUsings
-using System;
-using System.Web;
-using DevExpress.DataAccess.ConnectionParameters;
+﻿using System;
 using DevExpress.DataAccess.Sql;
-// ...
-#endregion #DesignerUsings
-
 
 namespace SimpleWebReportCatalog {
     public partial class Designer : System.Web.UI.Page {
@@ -19,7 +13,6 @@ namespace SimpleWebReportCatalog {
             }
         }
 
-
         private void InitDesignerPage(DesignerTask task) {
             BindToData();
 
@@ -29,30 +22,21 @@ namespace SimpleWebReportCatalog {
                     ASPxReportDesigner1.OpenReport(new ReportTemplate());
                     break;
                 case ReportEdditingMode.ModifyReport:
-                    // Load an existing report from the report storage.
+                    // Load a report from the report storage.
                     ASPxReportDesigner1.OpenReport(task.reportID);
                     break;
             }
         }
 
-
-        #region #BindToData
         private void BindToData() {
-            // Create a SQL data source with the specified connection parameters.
-            Access97ConnectionParameters connectionParameters =
-                new Access97ConnectionParameters(HttpRuntime.AppDomainAppPath + "App_Data\\nwind.mdb", "", "");
-            SqlDataSource ds = new SqlDataSource(connectionParameters);
-
-            // Create a custom SQL query to access the Products data table.
+            SqlDataSource ds = new SqlDataSource("Northwind");
             CustomSqlQuery query = new CustomSqlQuery();
             query.Name = "Products";
             query.Sql = "SELECT * FROM Products";
             ds.Queries.Add(query);
             ds.RebuildResultSchema();
-
-            // Add the created data source to the list of default data sources. 
+ 
             ASPxReportDesigner1.DataSources.Add("Northwind", ds);
         }
-        #endregion #BindToData
     }
 }
