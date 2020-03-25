@@ -8,14 +8,16 @@ using System.Linq;
 
 namespace SimpleWebReportCatalog
 {
-    public class CustomReportStorageWebExtension : DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension
+    public class CustomReportStorageWebExtension : 
+        DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension
     {
         private DataTable reportsTable = new DataTable();
         private SqlDataAdapter reportsTableAdapter;
         string connectionString = "Data Source=localhost;Initial Catalog=Reports;Integrated Security=True";
         public CustomReportStorageWebExtension()
         {
-            reportsTableAdapter = new SqlDataAdapter("Select * from ReportLayout", new SqlConnection(connectionString));
+            reportsTableAdapter = 
+                new SqlDataAdapter("Select * from ReportLayout", new SqlConnection(connectionString));
             SqlCommandBuilder builder = new SqlCommandBuilder(reportsTableAdapter);
             reportsTableAdapter.InsertCommand = builder.GetInsertCommand();
             reportsTableAdapter.UpdateCommand = builder.GetUpdateCommand();
@@ -27,7 +29,7 @@ namespace SimpleWebReportCatalog
         }
         public override bool CanSetData(string url)
         {
-            return true;
+            return GetUrls()[url].Contains("ReadOnly") ? false : true;
         }
         public override byte[] GetData(string url)
         {
@@ -68,6 +70,9 @@ namespace SimpleWebReportCatalog
         }
         public override string SetNewData(XtraReport report, string defaultUrl)
         {
+            // Append "1" if a new report name already exists.
+            if (GetUrls().ContainsValue(defaultUrl)) defaultUrl = string.Concat(defaultUrl,"1");
+
             // Save a report to the storage with a new URL. 
             // The defaultUrl parameter is the report name that the user specifies.
             DataRow row = reportsTable.NewRow();
