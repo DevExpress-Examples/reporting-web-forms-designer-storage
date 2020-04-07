@@ -25,7 +25,7 @@ Namespace SimpleWebReportCatalog
 			reportsTable.PrimaryKey = keyColumns
 		End Sub
 		Public Overrides Function CanSetData(ByVal url As String) As Boolean
-			Return If(GetUrls()(url).Contains("ReadOnly"), False, True)
+			Return True
 		End Function
 		Public Overrides Function GetData(ByVal url As String) As Byte()
 			' Get the report data from the storage.
@@ -59,11 +59,6 @@ Namespace SimpleWebReportCatalog
 			End If
 		End Sub
 		Public Overrides Function SetNewData(ByVal report As XtraReport, ByVal defaultUrl As String) As String
-			' Append "1" if a new report name already exists.
-			If GetUrls().ContainsValue(defaultUrl) Then
-				defaultUrl = String.Concat(defaultUrl,"1")
-			End If
-
 			' Save a report to the storage with a new URL. 
 			' The defaultUrl parameter is the report name that the user specifies.
 			Dim row As DataRow = reportsTable.NewRow()
