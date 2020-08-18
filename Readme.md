@@ -12,7 +12,7 @@
 
 # How to Integrate Web Report Designer in a Web Application
 
-The application allows you to add, delete, and edit reports stored a Microsoft SQL Server database. A project implements the [ReportStorageWebExtension](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension) descendant to access the database.
+The application allows you to add, delete, and edit reports stored a Microsoft SQL Server database. A project implements a web report storage (the [ReportStorageWebExtension](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension) descendant) to access the database. Note that the report storage in this project is for demonstration purposes only. Create your own implementation for use in production.
 
 This example also demonstrates how to add custom commands to the report designer menu at runtime. A custom _Close_ menu command redirects you to the homepage.
 
@@ -38,6 +38,7 @@ This example also demonstrates how to add custom commands to the report designer
 >   GO
 >   ```
 >- Add the [Northwind database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs) to your local MS SQL server. 
+
 
 **See also:**
 * [How to Integrate Web Report Designer in an MVC Web Application<](https://www.devexpress.com/Support/Center/p/T190370)
