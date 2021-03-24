@@ -62,7 +62,7 @@ GO
 * Add the [Northwind database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs) to your local MS SQL server. 
 
 ## See also
-* [How to Integrate Web Report Designer in an MVC Web Application<](https://www.devexpress.com/Support/Center/p/T190370)
+* [How to Integrate Web Report Designer in an MVC Web Application](https://www.devexpress.com/Support/Center/p/T190370)
 * [ASPxReportDesigner - How to Create an ASP.NET End-User Reporting Application with the File Report Storage Managed by the ASPxFileManager Control](https://www.devexpress.com/Support/Center/p/T227679)
 
 
