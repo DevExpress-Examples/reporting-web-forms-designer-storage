@@ -10,33 +10,56 @@
 * [Global.asax.cs](./CS/SimpleWebReportCatalog/Global.asax.cs) (VB: [Global.asax.vb](./VB/SimpleWebReportCatalog/Global.asax.vb))
 <!-- default file list end -->
 
-# How to Integrate Web Report Designer in a Web Application
+# How to integrate the Web Report Designer into a web application and Add, Edit, and Remove Reports from a Database storage
 
 ## Overview
-The application allows you to add, delete, and edit reports stored a Microsoft SQL Server database. A project implements a web report storage (the [ReportStorageWebExtension](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension) descendant) to access the database. Note that the report storage in this project is for demonstration purposes only. Create your own implementation for use in production.
+The example demonstrates how to integrate the [End-User Report Designer](https://docs.devexpress.com/XtraReports/17103/web-reporting/asp-net-webforms-reporting/end-user-report-designer) into an ASP.NET WebForms application and implement a **Microsoft SQL Server database [report storage](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension)** to **add**, **edit** and **delete** reports. This example also demonstrates how to add [custom commands to the report designer menu](https://docs.devexpress.com/XtraReports/17626/web-reporting/asp-net-webforms-reporting/end-user-report-designer/customization/customize-the-report-designer-toolbar) at runtime. A custom **Close** menu command redirects you to the homepage.
 
-This example also demonstrates how to add custom commands to the report designer menu at runtime. A custom _Close_ menu command redirects you to the homepage.
+**Note**
+The report storage implementation is for demonstration purposes only. Create your own implementation for use in production.
 
 ## Before you start
-* Create the **Reports** database in the local Microsoft SQL Server. Add the **ReportLayout** table with the following script:
+* Create a **Reports** database in the local Microsoft SQL Server. Add the **ReportLayout** table with the following script:
+# [SQL](#tab/original)
 ```SQL
-   USE [Reports]
-   GO
-   SET ANSI_NULLS ON
-   GO
-   SET QUOTED_IDENTIFIER ON
-   GO
-   CREATE TABLE [dbo].[ReportLayout](
-	    [ReportId] [int] IDENTITY(1,1) NOT NULL,
-	    [DisplayName] [nvarchar](50) NULL,
-	    [LayoutData] [varbinary](max) NULL,
-	    [ReportId] ASC
-   CONSTRAINT [PK_ReportLayout6] PRIMARY KEY CLUSTERED 
-   (
-   )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY =  OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-   ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-   GO
+USE [Reports]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ReportLayout](
+     [ReportId] [int] IDENTITY(1,1) NOT NULL,
+     [DisplayName] [nvarchar](https://github.com/DevExpress-Examples/Reporting_how-to-integrate-the-web-report-designer-into-a-web-application-t178798/blob/19.2.3%2B/50) NULL,
+     [LayoutData] [varbinary](https://github.com/DevExpress-Examples/Reporting_how-to-integrate-the-web-report-designer-into-a-web-application-t178798/blob/19.2.3%2B/max) NULL,
+     [ReportId] ASC
+CONSTRAINT [PK_ReportLayout6] PRIMARY KEY CLUSTERED 
+(
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY =  OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
 ```
+# [SQL Server 2016 - v13.0.x.x](#tab/sqlServer2016)
+```SQL
+USE [Reports]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ReportLayout](
+        [ReportId] [int] IDENTITY(1,1) NOT NULL ,
+        [DisplayName] [nvarchar](50) NULL,
+        [LayoutData] [varbinary](max) NULL,
+        CONSTRAINT PK_ReportLayout PRIMARY KEY (ReportId)
+);
+SELECT * 
+FROM [dbo].[ReportLayout]
+ORDER BY [ReportId] ASC        
+GO
+```
+***
+
 * Add the [Northwind database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs) to your local MS SQL server. 
 
 ## See also
