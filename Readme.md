@@ -12,35 +12,34 @@
 
 # How to Integrate Web Report Designer in a Web Application
 
+## Overview
 The application allows you to add, delete, and edit reports stored a Microsoft SQL Server database. A project implements a web report storage (the [ReportStorageWebExtension](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension) descendant) to access the database. Note that the report storage in this project is for demonstration purposes only. Create your own implementation for use in production.
 
 This example also demonstrates how to add custom commands to the report designer menu at runtime. A custom _Close_ menu command redirects you to the homepage.
 
-> Before you start:
->- Create the **Reports** database in the local Microsoft SQL Server. Add the **ReportLayout** table with the following script:
->
->   ```SQL
->   USE [Reports]
->   GO
->   SET ANSI_NULLS ON
->   GO
->   SET QUOTED_IDENTIFIER ON
->   GO
->   CREATE TABLE [dbo].[ReportLayout](
->	    [ReportId] [int] IDENTITY(1,1) NOT NULL,
->	    [DisplayName] [nvarchar](50) NULL,
->	    [LayoutData] [varbinary](max) NULL,
->	    [ReportId] ASC
->   CONSTRAINT [PK_ReportLayout6] PRIMARY KEY CLUSTERED 
->   (
->   )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY =  OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
->   ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
->   GO
->   ```
->- Add the [Northwind database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs) to your local MS SQL server. 
+## Before you start
+* Create the **Reports** database in the local Microsoft SQL Server. Add the **ReportLayout** table with the following script:
+```SQL
+   USE [Reports]
+   GO
+   SET ANSI_NULLS ON
+   GO
+   SET QUOTED_IDENTIFIER ON
+   GO
+   CREATE TABLE [dbo].[ReportLayout](
+	    [ReportId] [int] IDENTITY(1,1) NOT NULL,
+	    [DisplayName] [nvarchar](50) NULL,
+	    [LayoutData] [varbinary](max) NULL,
+	    [ReportId] ASC
+   CONSTRAINT [PK_ReportLayout6] PRIMARY KEY CLUSTERED 
+   (
+   )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY =  OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+   ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+   GO
+```
+* Add the [Northwind database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs) to your local MS SQL server. 
 
-
-**See also:**
+## See also
 * [How to Integrate Web Report Designer in an MVC Web Application<](https://www.devexpress.com/Support/Center/p/T190370)
 * [ASPxReportDesigner - How to Create an ASP.NET End-User Reporting Application with the File Report Storage Managed by the ASPxFileManager Control](https://www.devexpress.com/Support/Center/p/T227679)
 
