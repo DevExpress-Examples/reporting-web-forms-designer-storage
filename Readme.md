@@ -20,7 +20,7 @@ The report storage implementation is for demonstration purposes only. Create you
 
 ## Before you start
 * Create a **Reports** database in the local Microsoft SQL Server. Add the **ReportLayout** table with the following script:
-# [SQL](#tab/original)
+### SQL
 ```SQL
 USE [Reports]
 GO
@@ -39,7 +39,7 @@ CONSTRAINT [PK_ReportLayout6] PRIMARY KEY CLUSTERED
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 ```
-# [SQL Server 2016 - v13.0.x.x](#tab/sqlServer2016)
+### SQL Server 2016 - v13.0.x.x
 ```SQL
 USE [Reports]
 GO
