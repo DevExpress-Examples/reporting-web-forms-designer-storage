@@ -58,7 +58,6 @@ FROM [dbo].[ReportLayout]
 ORDER BY [ReportId] ASC        
 GO
 ```
-***
 
 * Add the [Northwind database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs) to your local MS SQL server. 
 
