@@ -35,8 +35,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ReportLayout](
      [ReportId] [int] IDENTITY(1,1) NOT NULL,
-     [DisplayName] [nvarchar](https://github.com/DevExpress-Examples/Reporting_how-to-integrate-the-web-report-designer-into-a-web-application-t178798/blob/19.2.3%2B/50) NULL,
-     [LayoutData] [varbinary](https://github.com/DevExpress-Examples/Reporting_how-to-integrate-the-web-report-designer-into-a-web-application-t178798/blob/19.2.3%2B/max) NULL,
+     [DisplayName] [nvarchar] NULL,
+     [LayoutData] [varbinary] NULL,
      [ReportId] ASC
 CONSTRAINT [PK_ReportLayout6] PRIMARY KEY CLUSTERED 
 (
