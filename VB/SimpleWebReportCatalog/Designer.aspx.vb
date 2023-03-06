@@ -1,4 +1,4 @@
-﻿Imports System
+Imports System
 Imports DevExpress.DataAccess.Sql
 
 Namespace SimpleWebReportCatalog

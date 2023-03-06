@@ -1,4 +1,5 @@
-﻿Imports System
+Imports System
+Imports System.Configuration
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Web.UI.WebControls
@@ -10,11 +11,10 @@ Namespace SimpleWebReportCatalog
 		Inherits System.Web.UI.Page
 
 		Private reportsTable As New DataTable()
-		Private connectionString As String = "Data Source=localhost;Initial Catalog=Reports;Integrated Security=True"
 		Private reportsTableAdapter As SqlDataAdapter
 
 		Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-
+			Dim connectionString = ConfigurationManager.ConnectionStrings("catalogConnectionString").ConnectionString
 			reportsTableAdapter = New SqlDataAdapter("Select * from ReportLayout", New SqlConnection(connectionString))
 			Dim builder As New SqlCommandBuilder(reportsTableAdapter)
 			reportsTableAdapter.InsertCommand = builder.GetInsertCommand()

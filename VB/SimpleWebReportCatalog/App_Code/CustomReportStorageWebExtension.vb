@@ -1,6 +1,7 @@
-﻿Imports DevExpress.XtraReports.UI
+Imports DevExpress.XtraReports.UI
 Imports System
 Imports System.Collections.Generic
+Imports System.Configuration
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.IO
@@ -12,8 +13,8 @@ Namespace SimpleWebReportCatalog
 
 		Private reportsTable As New DataTable()
 		Private reportsTableAdapter As SqlDataAdapter
-		Private connectionString As String = "Data Source=localhost;Initial Catalog=Reports;Integrated Security=True"
 		Public Sub New()
+			Dim connectionString = ConfigurationManager.ConnectionStrings("catalogConnectionString").ConnectionString
 			reportsTableAdapter = New SqlDataAdapter("Select * from ReportLayout", New SqlConnection(connectionString))
 			Dim builder As New SqlCommandBuilder(reportsTableAdapter)
 			reportsTableAdapter.InsertCommand = builder.GetInsertCommand()

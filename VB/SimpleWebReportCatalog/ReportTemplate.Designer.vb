@@ -69,7 +69,7 @@
 			' 
 			' xrLabel2
 			' 
-			Me.xrLabel2.Font = New System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold)
+			Me.xrLabel2.Font = New DevExpress.Drawing.DXFont("Times New Roman", 14F, DevExpress.Drawing.DXFontStyle.Bold)
 			Me.xrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(10.00001F, 10.00001F)
 			Me.xrLabel2.Name = "xrLabel2"
 			Me.xrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F)
