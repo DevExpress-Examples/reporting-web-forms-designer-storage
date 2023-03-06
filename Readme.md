@@ -13,7 +13,7 @@ This example integrates the [End-User Report Designer](https://docs.devexpress.c
 >
 
 
-![Report Designer with Report Storage and Custom Command](Images\screenshot.png)
+![Report Designer with Report Storage and Custom Command](Images/screenshot.png)
 
 ### Before you start
 
