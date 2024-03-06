@@ -1,4 +1,4 @@
-﻿namespace SimpleWebReportCatalog {
+namespace SimpleWebReportCatalog {
     public enum ReportEdditingMode { NewReport, ModifyReport };
 
     public class DesignerTask {

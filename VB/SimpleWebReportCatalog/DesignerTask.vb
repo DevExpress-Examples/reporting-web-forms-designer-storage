@@ -1,4 +1,4 @@
-﻿Namespace SimpleWebReportCatalog
+Namespace SimpleWebReportCatalog
 	Public Enum ReportEdditingMode
 		NewReport
 		ModifyReport

@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
@@ -8,11 +9,10 @@ using System.Web.UI.WebControls;
 namespace SimpleWebReportCatalog {
     public partial class Default : System.Web.UI.Page {
         private DataTable reportsTable = new DataTable();
-        string connectionString = "Data Source=localhost;Initial Catalog=Reports;Integrated Security=True";
         private SqlDataAdapter reportsTableAdapter;
 
         protected void Page_Load(object sender, EventArgs e) {
-
+            string connectionString = ConfigurationManager.ConnectionStrings["catalogConnectionString"].ConnectionString;
             reportsTableAdapter = new SqlDataAdapter("Select * from ReportLayout", new SqlConnection(connectionString));
             SqlCommandBuilder builder = new SqlCommandBuilder(reportsTableAdapter);
             reportsTableAdapter.InsertCommand = builder.GetInsertCommand();

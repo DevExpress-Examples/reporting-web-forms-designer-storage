@@ -1,6 +1,7 @@
-﻿using DevExpress.XtraReports.UI;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -13,9 +14,9 @@ namespace SimpleWebReportCatalog
     {
         private DataTable reportsTable = new DataTable();
         private SqlDataAdapter reportsTableAdapter;
-        string connectionString = "Data Source=localhost;Initial Catalog=Reports;Integrated Security=True";
         public CustomReportStorageWebExtension()
         {
+            string connectionString = ConfigurationManager.ConnectionStrings["catalogConnectionString"].ConnectionString;
             reportsTableAdapter = 
                 new SqlDataAdapter("Select * from ReportLayout", new SqlConnection(connectionString));
             SqlCommandBuilder builder = new SqlCommandBuilder(reportsTableAdapter);

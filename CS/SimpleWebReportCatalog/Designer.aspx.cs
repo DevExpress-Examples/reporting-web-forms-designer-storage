@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using DevExpress.DataAccess.Sql;
 
 namespace SimpleWebReportCatalog {
