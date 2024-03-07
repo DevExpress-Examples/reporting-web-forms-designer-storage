@@ -56,7 +56,7 @@ GO
 
 Create the [Northwind database](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs) and add it to your local Microsoft SQL server. 
 
-## Files to Look At
+## Files to Review
 
 * [CustomReportStorageWebExtension.cs](./CS/SimpleWebReportCatalog/App_Code/CustomReportStorageWebExtension.cs) (VB: [CustomReportStorageWebExtension.vb](./VB/SimpleWebReportCatalog/App_Code/CustomReportStorageWebExtension.vb))
 * [Default.aspx](./CS/SimpleWebReportCatalog/Default.aspx) (VB: [Default.aspx](./VB/SimpleWebReportCatalog/Default.aspx))
