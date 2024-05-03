@@ -68,10 +68,9 @@ Create the [Northwind database](https://github.com/microsoft/sql-server-samples/
 
 ## Documentation
 
-- [Create an ASP.NET Web Forms Application with a Report Designer](http://docs.devexpress.devx/XtraReports/119172/web-reporting/asp-net-webforms-reporting/end-user-report-designer-in-asp-net-web-forms-reporting/quick-start/create-an-aspnet-webforms-application-with-a-report-designer)
-- [Add a Report Storage (ASP.NET Web Forms)](http://docs.devexpress.devx/XtraReports/17553/web-reporting/asp-net-webforms-reporting/end-user-report-designer-in-asp-net-web-forms-reporting/add-a-report-storage)
-- [End-User Report Designer Customization (ASP.NET Web Forms)](http://docs.devexpress.devx/XtraReports/17546/web-reporting/asp-net-webforms-reporting/end-user-report-designer-in-asp-net-web-forms-reporting/customization)
-
+- [Create an ASP.NET Web Forms Application with a Report Designer](https://docs.devexpress.com/XtraReports/119172/web-reporting/asp-net-webforms-reporting/end-user-report-designer-in-asp-net-web-forms-reporting/quick-start/create-an-aspnet-webforms-application-with-a-report-designer)
+- [Add a Report Storage (ASP.NET Web Forms)](https://docs.devexpress.com/XtraReports/17553/web-reporting/asp-net-webforms-reporting/end-user-report-designer-in-asp-net-web-forms-reporting/add-a-report-storage)
+- [End-User Report Designer Customization (ASP.NET Web Forms)](https://docs.devexpress.com/XtraReports/17546/web-reporting/asp-net-webforms-reporting/end-user-report-designer-in-asp-net-web-forms-reporting/customization)
 
 ## More Examples
 
