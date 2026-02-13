@@ -78,7 +78,7 @@ Create the [Northwind database](https://github.com/microsoft/sql-server-samples/
 * [How to Integrate Web Report Designer in an MVC Web Application](https://github.com/DevExpress-Examples/Reporting_how-to-integrate-the-web-report-designer-into-an-mvc-web-application-t190370)
 * [Reporting for Web Forms - Report Designer with the ASPxFileManager Control in the Open Report Dialog](https://github.com/DevExpress-Examples/reporting-web-forms-designer-file-management-dialog)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=reporting-web-forms-designer-storage&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=reporting-web-forms-designer-storage&~~~was_helpful=no)
 
